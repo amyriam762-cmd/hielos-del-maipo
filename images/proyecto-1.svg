@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cubos de hielo para eventos">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#145db7"/>
+      <stop offset="1" stop-color="#1bb5d8"/>
+    </linearGradient>
+    <linearGradient id="top1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2fdff"/>
+      <stop offset="1" stop-color="#c8effb"/>
+    </linearGradient>
+    <linearGradient id="left1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a8e4f7"/>
+      <stop offset="1" stop-color="#6cc7e6"/>
+    </linearGradient>
+    <linearGradient id="right1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#57b6da"/>
+      <stop offset="1" stop-color="#2d86ad"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg1)"/>
+  <circle cx="330" cy="40" r="90" fill="#ffffff" opacity=".07"/>
+  <circle cx="60" cy="220" r="110" fill="#ffffff" opacity=".05"/>
+  <ellipse cx="205" cy="212" rx="120" ry="16" fill="#062b3a" opacity=".25"/>
+
+  <g>
+    <polygon points="140,120 180,142 140,164 100,142" fill="url(#top1)"/>
+    <polygon points="100,142 140,164 140,208 100,186" fill="url(#left1)"/>
+    <polygon points="180,142 140,164 140,208 180,186" fill="url(#right1)"/>
+  </g>
+  <g>
+    <polygon points="228,86 262,104 228,122 194,104" fill="url(#top1)"/>
+    <polygon points="194,104 228,122 228,158 194,140" fill="url(#left1)"/>
+    <polygon points="262,104 228,122 228,158 262,140" fill="url(#right1)"/>
+  </g>
+  <g>
+    <polygon points="286,138 322,157 286,176 250,157" fill="url(#top1)"/>
+    <polygon points="250,157 286,176 286,212 250,193" fill="url(#left1)"/>
+    <polygon points="322,157 286,176 286,212 322,193" fill="url(#right1)"/>
+  </g>
+
+  <g fill="#ffffff" opacity=".85">
+    <path d="M92 70l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+    <path d="M300 46l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>
+    <path d="M348 120l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+  </g>
+</svg>
