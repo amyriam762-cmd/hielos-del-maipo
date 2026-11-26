@@ -1,0 +1,126 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#eef2f7;color:#111827;line-height:1.5;transition:background .3s,color .3s}
+body.dark{background:#0b1220;color:#e5e7eb}
+a{text-decoration:none}
+
+.topbar{
+  position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;
+  gap:12px;padding:14px 24px;background:#0d3f8a;color:#fff;transition:background .3s
+}
+body.dark .topbar{background:#06101f}
+
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem;white-space:nowrap}
+.logo-img{width:32px;height:32px;object-fit:contain;border-radius:6px;background:#fff}
+
+.menu{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:18px}
+.menu a{color:#fff;font-weight:700;font-size:.95rem}
+
+.theme-btn{
+  padding:10px 14px;border:none;border-radius:6px;background:#1bb5d8;color:#fff;
+  font-weight:700;cursor:pointer
+}
+
+.hero{
+  min-height:48vh;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:56px 20px;background:linear-gradient(180deg,#145db7 0%,#0d4ea6 100%);
+  color:#fff;transition:background .3s
+}
+body.dark .hero{background:linear-gradient(180deg,#111827 0%,#0b1220 100%)}
+
+.hero-content{max-width:980px}
+.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.15;margin-bottom:14px}
+.hero p{font-size:1.05rem;max-width:860px;margin:0 auto 22px}
+
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.btn{display:inline-block;padding:12px 20px;border-radius:6px;font-weight:700;font-size:.95rem}
+.btn-light{background:#fff;color:#0d4ea6}
+.btn-outline{background:#1bb5d8;color:#fff}
+.btn-submit{background:#0d3f8a;color:#fff;border:none;cursor:pointer}
+
+.section{max-width:1180px;margin:0 auto;padding:42px 18px}
+.contact-strip{margin-top:-30px}
+
+.contact-strip h2,.about h2,.section h2{
+  font-size:1.8rem;margin-bottom:18px;color:#1f2937
+}
+body.dark .contact-strip h2,body.dark .about h2,body.dark .section h2{color:#f3f4f6}
+
+.contact-form{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-items:start
+}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:10px;border:1px solid #b9c3d1;border-radius:4px;background:#fff;font-size:.95rem
+}
+body.dark .contact-form input,body.dark .contact-form textarea{
+  background:#111827;color:#e5e7eb;border-color:#334155
+}
+.contact-form textarea{grid-column:span 1;min-height:74px;resize:vertical}
+.contact-form .btn-submit{grid-column:span 1;align-self:stretch}
+
+.resultado{margin-top:12px;font-weight:700}
+
+.about{text-align:center}
+.about p{max-width:980px;margin:0 auto;color:#374151}
+body.dark .about p{color:#cbd5e1}
+
+.grid{display:grid;gap:18px}
+.cards4{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+.card{
+  background:#fff;border-radius:10px;padding:18px 16px;box-shadow:0 5px 18px rgba(15,23,42,.12);
+  text-align:center;font-weight:700
+}
+body.dark .card{background:#111827;box-shadow:0 5px 18px rgba(0,0,0,.3)}
+.card small{display:block;margin-top:8px;font-weight:400;color:#4b5563}
+body.dark .card small{color:#cbd5e1}
+
+.projects{padding-top:12px}
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  justify-items:center;
+}
+.project-card{
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 18px rgba(15,23,42,.12);
+  text-align:center;
+  width:100%;
+  max-width:280px;
+}
+body.dark .project-card{background:#111827;box-shadow:0 5px 18px rgba(0,0,0,.3)}
+
+.project-card img{
+  display:block;
+  width:100%;
+  height:120px;
+  object-fit:cover;
+}
+.project-card h3{padding:10px 12px;font-size:1rem}
+
+.footer{
+  background:#0d4ea6;color:#fff;padding:30px 18px;transition:background .3s
+}
+body.dark .footer{background:#06101f}
+.footer-inner{max-width:900px;margin:0 auto;text-align:center}
+.footer h3{margin-bottom:10px}
+.footer p{margin:4px 0}
+
+@media (max-width: 980px){
+  .contact-form,.cards4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact-form textarea,.contact-form .btn-submit{grid-column:span 2}
+  .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 640px){
+  .topbar{flex-direction:column;align-items:flex-start}
+  .menu{justify-content:flex-start;gap:12px}
+  .hero{min-height:40vh;padding:42px 14px}
+  .contact-form,.cards4,.project-grid{grid-template-columns:1fr}
+  .contact-form textarea,.contact-form .btn-submit{grid-column:span 1}
+  .section{padding:34px 14px}
+  .project-card{max-width:240px}
+  .project-card img{height:110px}
+}
